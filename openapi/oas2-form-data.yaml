@@ -1,0 +1,29 @@
+swagger: '2.0'
+info:
+  title: Form Data API (OAS 2.0)
+  version: '1.0.0'
+basePath: /
+paths:
+  /submit:
+    post:
+      operationId: submitForm
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+      parameters:
+        - name: tags
+          in: formData
+          required: true
+          type: array
+          items:
+            type: string
+          collectionFormat: csv
+      responses:
+        '200':
+          description: Success
+          schema:
+            type: object
+            properties:
+              ok:
+                type: boolean

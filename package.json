@@ -1,0 +1,13 @@
+{
+  "name": "orval-barebones",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "orval": "orval --config ./orval.config.mjs"
+  },
+  "devDependencies": {
+    "orval": "^8.24.0",
+    "typescript": "^5.5.4"
+  }
+}
